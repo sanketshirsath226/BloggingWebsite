@@ -1,3 +1,4 @@
+
 body{
     margin:0px;
     background-color: #1A1A35;
@@ -7,6 +8,7 @@ body{
     {
         width:100%;
         float:left;
+        margin: 30px;
         text-align:center;
     }
     #logo
@@ -19,7 +21,7 @@ body{
         cursor:pointer;
         transition:1s;
         color:white;
-        font-family:cambria;
+        font-family:var(--font1);
     }
     #logo h1:hover
     {
@@ -46,17 +48,17 @@ body{
     padding:8px;
     }
     
-    #menu ul li a
-    {
-        font-family:cambria;
-    text-decoration:none;
-    color:white;
-    font-size:20px;
+    #menu ul li a{
+        font-family:var(--font1);
+        text-decoration:none;
+        color:white;
+        font-size:20px;
     }
     #menu ul li a:hover
     {
-    color:rgb(0, 62, 197);
+        color:rgb(0, 62, 197);
     }
+
     @media only screen and (max-width: 590px) {
         #header
         {
@@ -78,7 +80,48 @@ body{
             float:none;
             margin-right:0px;
         }
-    }
+    }      
+      .content {
+        height: 100%;
+        display: flex;
+        margin-top: 32px;
+        padding: 9px;
+        position: relative;
+      }
+      
+      .content::after {
+        content: "";
+        background-image: url("../img/11.svg");
+        position: absolute;
+        width: 100%;
+        height: inherit;
+        opacity: 0.15;
+        border-radius: 12px;
+      }
+      
+      .content-left {
+        font-family: var(--font1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 49px;
+        z-index: 1;
+      }
+      
+      .content-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .content-right img {
+        height: 500px;
+      }
+      
+      .big-heading{
+          font-size: 60px;
+      }
+
     @media only screen and (max-width: 320px) {
         #header
         {
@@ -94,3 +137,13 @@ body{
             display:block;
         }
      }
+     @media screen and (min-width: 800px) {
+        .column {
+          flex: 1
+        }
+      
+        .double-column {
+          flex: 2
+        }
+      }
+      

@@ -1,0 +1,96 @@
+body{
+    margin:0px;
+    background-color: #1A1A35;
+    color: white;
+    }
+    #header
+    {
+        width:100%;
+        float:left;
+        text-align:center;
+    }
+    #logo
+    {
+        width:30%;
+        float:left;
+    }
+    #logo h1
+    {
+        cursor:pointer;
+        transition:1s;
+        color:white;
+        font-family:cambria;
+    }
+    #logo h1:hover
+    {
+        color:rgb(0, 62, 197);
+    }
+    
+    #menu
+    {
+        float:left;
+        width:70%;
+    }
+    #menu ul
+    {
+          margin-right: 10%;
+          padding: 0;
+          float:right;
+    }
+    #menu ul li
+    {
+    cursor:pointer;
+    margin-right: 30px;
+    list-style-type:none;
+    display:inline-block;
+    padding:8px;
+    }
+    
+    #menu ul li a
+    {
+        font-family:cambria;
+    text-decoration:none;
+    color:white;
+    font-size:20px;
+    }
+    #menu ul li a:hover
+    {
+    color:rgb(0, 62, 197);
+    }
+    @media only screen and (max-width: 590px) {
+        #header
+        {
+            font-size:14px;
+        }
+        #logo
+        {
+            width:100%;
+            float:left;
+            text-align:center;
+        }
+        #menu
+        {
+            width:100%;
+            margin: 0 auto;
+        }
+        #menu ul
+        {
+            float:none;
+            margin-right:0px;
+        }
+    }
+    @media only screen and (max-width: 320px) {
+        #header
+        {
+            font-size:12px;
+        }
+        #logo h1
+        {
+            margin-bottom:1%;
+    
+        }
+          #menu ul li
+        {
+            display:block;
+        }
+     }

@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'CabinetGrotesk-Light';
-  src: url('/assets/CabinetGrotesk_Complete/Fonts/WEB/fonts/CabinetGrotesk-Light.woff2') format('woff2'),
-       url('/assets/CabinetGrotesk_Complete/Fonts/WEB/fonts/CabinetGrotesk-Light.woff') format('woff'),
-       url('/assets/CabinetGrotesk_Complete/Fonts/WEB/fonts/CabinetGrotesk-Light.ttf') format('truetype');
+  src: url('/assets/fonts/Fonts/WEB/fonts/CabinetGrotesk-Light.woff2') format('woff2'),
+       url('/assets/fonts/Fonts/WEB/fonts/CabinetGrotesk-Light.woff') format('woff'),
+       url('/assets/fonts/Fonts/WEB/fonts/CabinetGrotesk-Light.ttf') format('truetype');
        font-weight: 100;
        font-display: swap;
        font-style: normal;
@@ -10,9 +10,9 @@
 
 @font-face {
   font-family: 'CabinetGrotesk-Bold';
-  src: url('/assets/CabinetGrotesk_Complete/Fonts/WEB/fonts/CabinetGrotesk-Bold.woff2') format('woff2'),
-       url('/assets/CabinetGrotesk_Complete/Fonts/WEB/fonts/CabinetGrotesk-Bold.woff') format('woff'),
-       url('/assets/CabinetGrotesk_Complete/Fonts/WEB/fonts/CabinetGrotesk-Bold.ttf') format('truetype');
+  src: url('/assets/fonts/Fonts/WEB/fonts/CabinetGrotesk-Bold.woff2') format('woff2'),
+       url('/assets/fonts/Fonts/WEB/fonts/CabinetGrotesk-Bold.woff') format('woff'),
+       url('/assets/fonts/Fonts/WEB/fonts/CabinetGrotesk-Bold.ttf') format('truetype');
        font-weight: 100;
        font-display: swap;
        font-style: normal;
@@ -51,6 +51,7 @@
 }
 
 .my-2{
-  margin-top: 32px;
+  margin-top: 100px;
+  margin-right: 32px;
   margin-bottom: 32px;
 }

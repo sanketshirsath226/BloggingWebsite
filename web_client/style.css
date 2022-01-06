@@ -2,6 +2,7 @@
 html {
   overflow: scroll;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 ::-webkit-scrollbar {
   width: 0;  /* Remove scrollbar space */
@@ -21,26 +22,32 @@ body{
 	z-index: 1000;
 	left: 0;
 	top: 0;
+	padding: 25px;
+	font-family: var(--font1);
 	width: 100vw;
-	height: auto;
 }
 #header .header {
 	min-height: 8vh;
-	background-color: rgba(31, 30, 30, 0.24);
+	
 	transition: 0.3s ease background-color;
+}
+
+#header .brand{
+	margin: 10%;
 }
 #header .nav-bar {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-	height: 50%;
+	height: 50px;
 	max-width: 1300px;
 	padding: 0 10px;
 }
 #header .nav-list ul {
 	list-style: none;
 	position: absolute;
+	margin-right: 20px;
 	background-color: rgb(31, 30, 30);
 	width: 100vw;
 	height: 100vh;
@@ -58,7 +65,7 @@ body{
 	left: 0%;
 }
 #header .nav-list ul a {
-	font-size: 2.5rem;
+	font-size: 12sp;
 	font-weight: 500;
 	letter-spacing: 0.2rem;
 	text-decoration: none;
@@ -74,7 +81,7 @@ body{
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0);
 	color: rgba(240, 248, 255, 0.021);
-	font-size: 13rem;
+	font-size: 12sp;
 	letter-spacing: 50px;
 	z-index: -1;
 	transition: 0.3s ease letter-spacing;
@@ -99,7 +106,7 @@ body{
 	z-index: 100;
 	cursor: pointer;
 	transform: scale(0.8);
-	margin-right: 20px;
+	margin-right: 50px;
 }
 #header .hamburger:after {
 	position: absolute;
@@ -170,7 +177,7 @@ body{
 #hero h1 {
 	display: block;
 	width: fit-content;
-	font-size: 4rem;
+	font-size: 50px;
 	position: relative;
 	color: transparent;
 	animation: text_reveal 0.5s ease forwards;
@@ -227,7 +234,7 @@ body{
 		display: inline-block;
 	}
 	#header .nav-list ul li a {
-		font-size: 1.8rem;
+		font-size: 20px;
 	}
 	#header .nav-list ul a:after {
 		display: none;

@@ -8,9 +8,6 @@ html {
   width: 0;  /* Remove scrollbar space */
   background: transparent;  /* Optional: just make scrollbar invisible */
 }
-
-
-
 body{
     margin:0px;
     background-color: #1A1A35;
@@ -25,6 +22,10 @@ body{
 	
 	font-family: var(--font1);
 	width: 100vw;
+}
+#header h1
+{
+	padding-top: 20px; /*Added*/
 }
 #header .header {
 	min-height: 8vh;
@@ -66,14 +67,15 @@ body{
 	left: 0%;
 }
 #header .nav-list ul a {
+	display: block;
 	font-size: 12sp;
 	font-weight: 500;
 	letter-spacing: 0.2rem;
 	text-decoration: none;
 	color: white;
 	text-transform: uppercase;
-	padding: 20px;
-	display: block;
+	padding-left: 20px; /*Added*/
+	padding-top:25px;/*Added*/
 }
 #header .nav-list ul a::after {
 	content: attr(data-after);
@@ -149,7 +151,10 @@ body{
 	top: 0;
 }
 /* End Header section */
-
+.center
+{
+	margin: 0;/*Added*/
+}
 /* Hero Section */
 #hero {
 	background-image: url(./img/hero-bg.png);
@@ -305,7 +310,7 @@ body{
         }
         .content{
           display: block;
-        }
+	}
         .content-right {
           flex: 2
         }

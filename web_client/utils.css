@@ -20,6 +20,8 @@
 :root { 
   --font1: "CabinetGrotesk-Light";
   --font2: "CabinetGrotesk-Bold";
+  --color: #3c3163;
+  --transition-time: 0.5s;
 }
 
 .center{

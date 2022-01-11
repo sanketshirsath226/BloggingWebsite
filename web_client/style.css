@@ -19,13 +19,13 @@ body{
 	z-index: 1000;
 	left: 0;
 	top: 0;
-	
 	font-family: var(--font1);
 	width: 100vw;
 }
 #header h1
 {
-	padding-top: 20px; /*Added*/
+	padding-top: 20px;
+	padding-bottom: 10px; /*Added*/
 }
 #header .header {
 	min-height: 8vh;
@@ -74,8 +74,9 @@ body{
 	text-decoration: none;
 	color: white;
 	text-transform: uppercase;
-	padding-left: 20px; /*Added*/
+	padding-left: 80px; /*Added*/
 	padding-top:25px;/*Added*/
+
 }
 #header .nav-list ul a::after {
 	content: attr(data-after);
@@ -219,7 +220,9 @@ body{
 	animation-delay: 2.5s;
 }
 
-
+.active{
+	padding-left: 0px;
+}
 
 
 /* End Hero Section */
@@ -231,10 +234,14 @@ body{
 	}
 	#header .nav-list ul {
 		position: initial;
+		padding-left: 0px;
 		display: block;
 		height: auto;
 		width: fit-content;
 		background-color: transparent;
+	}
+	.active{
+		padding-left: 0px;
 	}
 	#header .nav-list ul li {
 		display: inline-block;
@@ -262,7 +269,9 @@ body{
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
-		width: 300px;
+		margin-bottom: auto;
+		margin-top: auto;
+		width: auto;
         padding: 49px;
         z-index: 1;
       }
@@ -289,8 +298,11 @@ body{
 		font-size: 40px;
 		color: #FFB3B3;
 	}
+	.paragraph{
+		font-size: 18px;
+	}
 
-    @media only screen and (min-width: 600px) and (max-width:1200px) {
+    @media only screen and (min-width: 300px) and (max-width:1200px) {
         #header
         {
             font-size:12px;
@@ -304,6 +316,8 @@ body{
         {
             display:block;
         }
+
+		
         .content-left {
 			display: block;
           flex: 1
@@ -319,6 +333,9 @@ body{
           max-width: 600px;
           height: auto;
         }
+		.big-heading{
+			font-size: 50px;
+		}
         
       }
     

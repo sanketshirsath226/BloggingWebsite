@@ -290,7 +290,7 @@ body{
 		color: #FFB3B3;
 	}
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (min-width: 600px) and (max-width:1200px) {
         #header
         {
             font-size:12px;
@@ -321,4 +321,4 @@ body{
         }
         
       }
-      
+    

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADS</title>
+    <link rel="stylesheet" href="content.css">
+    <link rel="stylesheet" href="../utils.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section style="margin-left: auto; margin-right: auto;">
+        <div id="title-bg" style="--bg-img: url('/../assets/images/Historic Personal Computers Illustration (2).png') ">
+            <div class="title-content">
+                <p id="title">Advanced Data Structures</p>
+                <p id="stmt" style="color: #0AFF5C;"> Well-balanced Trees</p>
+            </div>
+          </div>
+      </section>
+
+            <div class="grid-item">
+                <h1 style="color: #0AFF5C; text-align: center; margin-top: 50px; font-size: 30px;">How To Create an AVL Trees?</h1>
+                <p>Since we now have a clear understanding of the basic fundamentals, let¶s go ahead and create our own AVL tree
+                    from scratch.
+                    Say, we have to insert keys 40, 20, 10, 25, 30, 22, 50 in the order as mentioned</p>
+                    
+                    
+                    
+            </div>
+
+            <section class="grid" style="margin-left: 30px; margin-right: 30px;">
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <p><b>STEP-01: INSERT 40</b></p>
+                        <img src="\assets\data\DSAAT\step1.png" alt="">
+                        <p style="text-align: center;">Fig. Inserted 40</p>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <p>STEP-02: INSERT 20</p>
+                        <img src="\assets\data\DSAAT\step2.png" alt="">
+                        <p style="text-align: center;">Fig. Inserted 20</p>
+                    </div>
+                    <div class="grid-item">
+                        <p style="text-align: center;">STEP-03(A): INSERT 10</p>
+                        <img src="\assets\data\DSAAT\step3.png" alt="">
+                        <p style="text-align: center;">Fig. Inserted 10</p>
+                        <p>As soon as we insert 10, the tree becomes imbalanced due to LL-insertion, therefore perform a LL rotation about the
+                            key value 40.</p>
+                    </div>
+                    <div class="grid-item">
+                        <p>STEP-03(B): Balanced AVL after inserting 10</p>
+                        <img src="\assets\data\DSAAT\step3b.png" alt="">
+                        <p style="text-align: center;">Fig. Balanced after Inserting 10</p>
+                    </div>
+                    <div class="grid-item">
+                        <p style="text-align: center;">STEP-04: INSERT 25</p>
+                        <img src="\assets\data\DSAAT\step4.png" alt="">
+                        <p style="text-align: center;">Fig. Inserted 25</p>
+                    </div>
+        
+                    <div class="grid-item">
+                        <p style="text-align: center;">STEP-05(A): INSERT 30</p>
+                        <img src="\assets\data\DSAAT\step5a.png" alt="">
+                        <p style="text-align: center;">Fig. Inserted 30.</p>
+                        <p>On inserting 30, keys 40 as well as 20 becomes imbalanced</p>
+                        <p><b>NOTE: </b>Whenever two nodes become imbalanced, we start form the node which we inserted and go upwards
+                         towards its acestors, the first imbalanced node that we encounter has to be balanced first.</p>
+                    </div>
+                    <div class="grid-item">
+                        <p style="text-align: center;">STEP-05(B): Balanced AVL after inserting 30</p>
+                        <img src="\assets\data\DSAAT\step5b.png" alt="">
+                        <p style="text-align: center;">Fig. Balanced after Inserting 30</p>
+                    </div>
+                    <div class="grid-item">
+                        <p style="text-align: center;">STEP-06(A): INSERT 22</p>
+                        <img src="\assets\data\DSAAT\step6.png" alt="">
+                        <p style="text-align: center;">Fig. Inserted 22.</p>
+                        <p>The root node becomes imbalanced, due to insertion in RLL, so do we have to perform a RLL rotation? Nope.
+                            We always consider the 1st two of all the notations, therefore we perform RL rotation.</p>
+                    </div>
+                    <div class="grid-item">
+                        <p style="text-align: center;">STEP-06(B): Balanced AVL after inserting 22</p>
+                        <img src="\assets\data\DSAAT\step6b.png" alt="">
+                        <p style="text-align: center;">Fig. Balanced after Inserting 22.</p>
+                    </div>
+                    <div class="grid-item">
+                        <p style="text-align: center;">STEP-07(A): INSERTING 50</p>
+                        <img src="\assets\data\DSAAT\step7.png" alt="">
+                        <p style="text-align: center;">Fig. Inserted 50.</p>
+                        <p>This imbalanced tree can be balanced by an RR rotation about the key value 30.</p>
+                    </div>
+                </div>
+            </section>
+            <div class="grid-item">
+                <p style="text-align: center;">STEP-07(B): Balanced AVL after inserting 50</p>
+                <img src="\assets\data\DSAAT\step7b.png" alt="">
+                <p style="text-align: center;">Fig. Balanced after Inserting 50</p>
+                <p><b>Hence, the AVL tree is perfectly balanced. That is all we have to discuss about "Well Balanced Trees". The rotation
+                    operation itself is very fast and simple, and is an excellent illustration of the usefulness in balancing the tree. So here
+                    we conclude our discussion. Thank You for reading</b></p>
+            </div>
+
+            <div class="container">
+                <p><b><i>THANK YOU</i></b></p>
+                <ul class="pagination">
+                  <li class="icon">
+                    <a href="#"><span class="fa fa-angle-left"></span>Previous</a>
+                  </li>
+                  <li><a href="ads.html">1</a></li>
+                  <li><a href="ads2.html">2</a></li>
+                  <li><a href="ads3.html">3</a></li>
+                  <li class="icon">
+                    <a href="#">Next<span class="fa fa-angle-right"></span></a>
+                  </li>
+                </ul>
+              </div>
+      <!-- Site footer -->
+    <footer class="site-footer">
+        <div class="container">
+        <div class="row">
+            
+            <div class="col-md-4 col-sm-6 col-xs-12">
+            <h1>Contact Us</h1>
+            <ul class="social-icons">
+                <li><a class="facebook" href="https://www.facebook.com/rohan.golawar.5" target="about:blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="https://twitter.com/_int_32" target="about:blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="https://github.com/Sarwesh2003/BloggingWebsite.git" target="about:blank"><i class="fa fa-github"></i></a></li>
+                <li><a class="linkedin" href="https://www.linkedin.com/in/sarthak-wakchoure-35a14018a/" target="about:blank"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+            </div>
+        </div>
+        </div>
+    </footer>
+      <script src="../main.js"></script>
+</body>
+</html>

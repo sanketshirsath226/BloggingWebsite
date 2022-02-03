@@ -24,6 +24,21 @@
   --transition-time: 0.5s;
 }
 
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+body{
+    margin:0px;
+    background-color: #1A1A35;
+	min-height: 100vh;
+    color: white;
+    }
 .center{
   text-align: center
 }

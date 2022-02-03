@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADS</title>
+    <link rel="stylesheet" href="content.css">
+    <link rel="stylesheet" href="../utils.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section style="margin-left: auto; margin-right: auto;">
+        <div id="title-bg" style="--bg-img: url('/../assets/images/Historic Personal Computers Illustration (2).png') ">
+            <div class="title-content">
+                <p id="title">Advanced Data Structures</p>
+                <p id="stmt" style="color: #0AFF5C;"> Well-balanced Trees</p>
+            </div>
+          </div>
+      </section>
+    <section style="margin-left: 30px; margin-right: 30px;">
+        <div class="grid-container">
+            <div class="grid-item">
+                <h1 style="color: #0AFF5C; text-align: center; margin-top: 50px; font-size: 30px;">What is AVL Trees?</h1>
+                <p>In computer science , an AVL tree (named after inventors Adelson-Velsky and Landis) is a self-balancing binary
+                    search tree.
+                    To balance the height of a BST we define a factor called as the "balance factor"
+                    The balance factor of a binary tree is the difference in heights of its two subtrees (hR -- hL).
+                    Balance factor = height of the left subtree-height of the right subtree
+                    The balance factor (bf) of a height balanced binar\ tree ma\ take on one of the values -1, 0, +1.
+                    Condition for balanced node of a BST:
+                    |bf| = |hl-hr| <=1.</p>
+            </div>
+            <div class="grid-item">
+                <h1 style="color: #0AFF5C; text-align: center; margin-top: 50px; font-size: 30px;">Different types of rotations in AVL Trees?</h1>
+                <p>To balance itself, an AVL tree may perform the following four kinds of rotations-</p>
+                <ol type="i" style="font-size: large; text-align: start;"><b>
+                    <li>Left-Left rotation</li>
+                    <li>Right-Right rotation</li>
+                    <li>Left-Right rotation</li>
+                    <li>Right-Left rotation</li>
+                </b></ol>
+            </div>
+            
+            <div class="grid-item">
+                <h2>Left-Left Rotation</h2>
+                <img src="\assets\data\DSAAT\ll.jpeg" alt="">
+                <p style="text-align: center;">Fig. Balancing a BST via LL rotation</p>
+                <p>If a tree becomes unbalanced, when a node is inserted into the left subtree of the left subtree, then we call it a
+                    LL-imbalance , so let us call this rotation also as LL-rotation .</p>
+            </div>
+            <div class="grid-item">
+                <h2>Right-Right Rotation</h2>
+                <img src="\assets\data\DSAAT\rr.jpeg" alt="">
+                <p style="text-align: center;">Fig. Balancing a BST via RR rotation</p>
+                <p>If a tree becomes unbalanced, when a node is inserted into the right subtree of the right subtree, then we call it a
+                    RR-imbalance , so let us call this rotation also as RR-rotation.</p>
+            </div>  
+            <div class="grid-item">
+                <h2>Left-Right Rotation</h2>
+                <p>A left-right rotation is a combination of left rotation followed by right rotation.</p>
+                <img src="\assets\data\DSAAT\lr.jpeg" alt="">
+                <p style="text-align: center;">Fig. Balancing a BST via LR rotation</p>
+            </div>
+            <div class="grid-item">
+                <h2>Right-Left Rotation</h2>
+                <p>The second type of double rotation is Right-Left Rotation. It is a combination of right rotation followed by left rotation.</p>
+                <img src="\assets\data\DSAAT\rl.jpeg" alt="">
+                <p style="text-align: center;">Fig. Balancing a BST via RL rotation</p>
+            </div>
+
+            <div class="grid-item">
+                
+            </div>
+            <div class="grid-item">
+            
+            </div>
+            
+          </div> 
+      </section>
+
+
+    <div class="container">
+        <p style=""><b><i>Excited to Know How to create AVL Tree?</i></b></p>
+        <ul class="pagination">
+          <li class="icon">
+            <a href="#"><span class="fa fa-angle-left"></span>Previous</a>
+          </li>
+          <li><a href="ads.html">1</a></li>
+          <li><a href="ads2.html">2</a></li>
+          <li><a href="ads3.html">3</a></li>
+          <li class="icon">
+            <a href="#">Next<span class="fa fa-angle-right"></span></a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Site footer -->
+    <footer class="site-footer">
+        <div class="container">
+        <div class="row">
+            
+            <div class="col-md-4 col-sm-6 col-xs-12">
+            <h1>Contact Us</h1>
+            <ul class="social-icons">
+                <li><a class="facebook" href="https://www.facebook.com/rohan.golawar.5" target="about:blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="https://twitter.com/_int_32" target="about:blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="https://github.com/Sarwesh2003/BloggingWebsite.git" target="about:blank"><i class="fa fa-github"></i></a></li>
+                <li><a class="linkedin" href="https://www.linkedin.com/in/sarthak-wakchoure-35a14018a/" target="about:blank"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+            </div>
+        </div>
+        </div>
+    </footer>
+      <script src="../main.js"></script>
+</body>
+</html>

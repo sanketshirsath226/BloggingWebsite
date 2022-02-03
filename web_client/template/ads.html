@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="content.css">
+    <link rel="stylesheet" href="../utils.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>ADS</title>
+</head>
+<body>
+
+      <section style="margin-left: auto; margin-right: auto;">
+        <div id="title-bg" style="--bg-img: url('/../assets/images/Historic Personal Computers Illustration (2).png') ">
+            <div class="title-content">
+                <p id="title">Advanced Data Structures</p>
+                <p id="stmt" style="color: #0AFF5C;"> Well-balanced Trees</p>
+                <p>Welcome,<br>To explain what do you mean by "Well Balanced Trees?"<br>
+                    We have taken an example of a Binary Search Tree<br> to understand the concept. In this section,
+                    We will have a breif<br>discussion on the topics such as Binary Search Tree,<br>
+                    problems/drawbacks with binary search tree (BST)<br>and how can a BST
+                    be imporved? And later on we'll discuss AVL Trees.</p>
+            </div>
+          </div>
+      </section>
+
+      <section style="margin-left: 30px; margin-right: 30px;">
+        <div class="grid-container">
+            <div class="grid-item">
+                <h1 style="color: #0AFF5C; text-align: center; margin-top: 50px; font-size: 30px;">What is Binary Search Tree?</h1>
+                    <p>Binary search tree is a data structure that quickly allows us to
+                        maintain a sorted list of numbers.
+                        <ul style="text-align: start;">
+                            <li>It is called a binary tree because each tree node has a maximum of two children.</li>
+                            <li>It is called a search tree because it can be used to search for the presence of a number in O(log(n)) time.</li>
+                        </ul></p>
+                        <p>The properties that separate a binary search tree from a regular binary tree are:</p>
+                            <ul style="text-align: start;">
+                                <li>All nodes of left subtree are less than the root node</li>
+                                <li>All nodes of right subtree are more than the root node</li>
+                                <li>Both subtrees of each node are also BSTs i.e. they have the above two properties</li>
+                            </ul>
+                            <p>The binary tree on the right isn't a binar search tree because the right subtree of the node "3" contains a value smaller than it.</p>
+                        
+            </div>
+            <div class="grid-item">
+                <img src="\assets\data\DSAAT\1.jpeg" alt="">
+            </div>
+            
+            <div class="grid-item">
+                <h2>Binary Search Tree Applications</h2>
+                <ol style="text-align: start;">
+                    <li style="margin: 10px; font-size: large;">BSTs are used for indexing and multi-level indexing.</li>
+                    <li style="margin: 10px; font-size: large;">They are also helpful to implement various searching algorithms.</li>
+                    <li style="margin: 10px; font-size: large;">It is helpful in maintaining a sorted stream of data.</li>
+                    <li style="margin: 10px; font-size: large;">TreeMap and TreeSet data structures are internally implemented using self-balancing BSTs</li>
+                </ol>
+            </div>
+            <div class="grid-item">
+                <h2>Time Complexity of Binary Search Tree: </h2>
+                <table border="1" cellpadding = "5" cellspacing = "5" bgcolor="white" style="color: black; font-size: large;">
+                    <tr>
+                      <th>Operation</th>
+                      <th>Best Case Complexity</th>
+                      <th>Average Case Complexiy</th>
+                      <th>Worst Case Complexity</th>
+                    </tr>
+                    <tr>
+                      <td>Search</td>
+                      <td>O(log n)</td>
+                      <td>O(log n)</td>
+                      <td>O(n)</td>
+                    </tr>
+                    <tr>
+                      <td>Insertion</td>
+                      <td>O(log n)</td>
+                      <td>O(log n)</td>
+                      <td>O(n)</td>
+                    </tr>
+                    <tr>
+                        <td>Deletion</td>
+                        <td>O(log n)</td>
+                        <td>O(log n)</td>
+                        <td>O(n)</td>
+                    </tr>
+                  </table> 
+        </div>  
+            <div class="grid-item">
+                <h2>Problems/Drawbacks with Binary Search Tree</h2>
+                <p>The height of a binary search tree is determined by the order<br>in which the elements are inserted. Say, we take the
+                    same set of keys but the different order of insertion as an example to clarify this scenario .The keys are 5, 10, 20, 25,
+                    30, 40, 50.</p>
+                    <p><b>Case 1: </b>When the order of insertion is 30, 40, 10, 50 ,20 ,5, 35 -> height of the BST= log n.</p>
+                    <img src="\assets\data\DSAAT\2.jpeg" alt="">
+                    <p style="text-align: center;">Fig: Height of the BST = log n</p>
+                
+            </div>
+            <div class="grid-item">
+                <p><b>Case 2: </b>When the order of insertion is 50, 40, 35, 30, 20, 10, 5 ->height of the BST=N.</p>
+                <img src="\assets\data\DSAAT\3.jpeg" alt="">
+                <p style="text-align: center;">Fig: Height of the BST = N</p>
+                <p><b>NOTE: </b>So, the problem with BST is that we cannot control the height to be in the logarithmic range
+                    (log N) and it becomes equal to linear(O(N)), which is the same as linear search.</p>
+            </div>
+
+
+
+            
+            <div class="grid-item">
+                <h2>How to know if tree is balanced?</h2>
+                <p>A tree is perfectly height-balanced if the left and right subtrees of an\ node are the same height. e.g.</p>
+                <img src="\assets\data\DSAAT\4.jpeg" height="400px" width="400px" alt="">
+                <p>It is clear that at every level there are twice as many nodes as at the previous level, so we do indeed get H = O(logN).
+                    However, perfect height balance is very rare: it is only possible if there are exactly 2^H-1 nodes!
+                    As a practical alternative, we use trees that are 'almost' perfectly height balanced. We will say that a tree is
+                    height-balanced if the heights of the left and right subtrees of each node are within 1. The following tree fits this
+                    definition:</p>
+                    <img src="\assets\data\DSAAT\5.jpeg" height="400px" width="400px" alt="">
+                    <p>
+                        We will say this tree is height-balanced.
+                        How can we tell if a tree is height-balanced? We have to check every node. The fastest is way is to start at the leaves
+                        and work your way up. When you reach a node, you will know the heights of its two subtrees; from that you can tell
+                        whether it is height-balanced and also compute the node's height (for use by its parent). For example, in the tree
+                        above
+                    </p>
+            </div>
+            <div class="grid-item">
+                
+                <img src="\assets\data\DSAAT\6.jpeg" height="400px" width="400px" alt="">
+                <p>C and D are leaves. Their subtrees are all height 0 so C and D are both perfectly balanced. Having finished D we can
+                    compute the heights of B's subtrees</p>
+                    <img src="\assets\data\DSAAT\7.jpeg" height="400px" width="400px" alt="">
+                <p>B is not perfectly balanced, but the heights of of its subtrees differ only by 1, so B is regarded as height-balanced.
+                    Now we can compute the balance of A</p>
+                <img src="\assets\data\DSAAT\8.jpeg" height="400px" width="400px" alt="">
+                <p>Like B, A's two subtrees differ by 1 in height. We have now looked at every node; every one is height-balanced, so
+                    the tree as a whole is considered to be height-balanced.</p>
+            </div>
+            
+          </div> 
+      </section>
+      
+      <div class="container">
+        <p style=""><b><i>Now we are  ready to understand the concept of AVL trees.</i></b></p>
+        <ul class="pagination">
+          <li class="icon">
+            <a href="#"><span class="fa fa-angle-left"></span>Previous</a>
+          </li>
+          <li><a href="ads.html">1</a></li>
+          <li><a href="ads2.html">2</a></li>
+          <li><a href="ads3.html">3</a></li>
+          <li class="icon">
+            <a href="#">Next<span class="fa fa-angle-right"></span></a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Site footer -->
+    <footer class="site-footer">
+        <div class="container">
+        <div class="row">
+            
+            <div class="col-md-4 col-sm-6 col-xs-12">
+            <h1>Contact Us</h1>
+            <ul class="social-icons">
+                <li><a class="facebook" href="https://www.facebook.com/rohan.golawar.5" target="about:blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="https://twitter.com/_int_32" target="about:blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="https://github.com/Sarwesh2003/BloggingWebsite.git" target="about:blank"><i class="fa fa-github"></i></a></li>
+                <li><a class="linkedin" href="https://www.linkedin.com/in/sarthak-wakchoure-35a14018a/" target="about:blank"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+            </div>
+        </div>
+        </div>
+    </footer>
+      <script src="../main.js"></script>
+</body>
+</html>
